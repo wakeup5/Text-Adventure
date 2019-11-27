@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class CameraController : Targetable
 {
-	[SerializeField]
-	public Transform target;
-
 	[SerializeField]
 	private float smoothTime;
 

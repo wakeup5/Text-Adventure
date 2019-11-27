@@ -13,6 +13,12 @@ public class Footprint : MonoBehaviour
 	[SerializeField]
 	private float animationTime;
 
+	[SerializeField]
+	private AudioClip[] sounds;
+
+	[SerializeField]
+	private AudioSource audio;
+
 	private Coroutine anim;
 	private Vector3 localPosition;
 	private Vector3 worldPosition;
@@ -22,12 +28,16 @@ public class Footprint : MonoBehaviour
 		if (body == null)
 		{
 			body = transform.parent;
+			if (body == null)
+			{
+				enabled = false;
+				return;
+			}
 		}
 
-		if (body == null)
+		if (audio == null)
 		{
-			enabled = false;
-			return;
+			audio = GetComponent<AudioSource>();
 		}
 
 		localPosition = transform.position - body.position;
@@ -46,6 +56,15 @@ public class Footprint : MonoBehaviour
 	{
 		worldPosition = body.position + localPosition;
 		StartAnimation();
+
+		if (audio == null ||
+			sounds.Length == 0)
+		{
+			return;
+		}
+
+		audio.clip = sounds[Random.Range(0, sounds.Length)];
+		audio.Play();
 	}
 
 	private void StartAnimation()
