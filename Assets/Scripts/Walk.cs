@@ -8,9 +8,6 @@ public class Walk : MonoBehaviour
 	private Footprint[] foots;
 
 	[SerializeField]
-	private Vector3 moveSpeed;
-
-	[SerializeField]
 	private float footprintLength;
 
 	private Vector3 temp;
@@ -24,13 +21,12 @@ public class Walk : MonoBehaviour
 
 	private void Update()
 	{
-		transform.Translate(moveSpeed * Time.deltaTime, Space.World);
-
 		if (Vector3.Distance(temp, transform.position) > footprintLength)
 		{
 			temp = transform.position;
 
-			foots[index].Show();
+			foots[index].gameObject.SetActive(false);
+			foots[index].gameObject.SetActive(true);
 
 			index = (index + 1) % 2;
 		}

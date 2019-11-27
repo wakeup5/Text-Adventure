@@ -14,16 +14,13 @@ public class Footprint : MonoBehaviour
 	private float animationTime;
 
 	[SerializeField]
-	private AudioClip[] sounds;
-
-	[SerializeField]
-	private AudioSource audio;
+	private SoundPlayer sound;
 
 	private Coroutine anim;
 	private Vector3 localPosition;
 	private Vector3 worldPosition;
 
-	private void Start()
+	private void Awake()
 	{
 		if (body == null)
 		{
@@ -35,16 +32,16 @@ public class Footprint : MonoBehaviour
 			}
 		}
 
-		if (audio == null)
-		{
-			audio = GetComponent<AudioSource>();
-		}
-
 		localPosition = transform.position - body.position;
 
 		Color color = text.color;
 		color.a = 0f;
 		text.color = color;
+	}
+
+	private void OnEnable()
+	{
+		Show();
 	}
 
 	private void Update()
@@ -56,15 +53,7 @@ public class Footprint : MonoBehaviour
 	{
 		worldPosition = body.position + localPosition;
 		StartAnimation();
-
-		if (audio == null ||
-			sounds.Length == 0)
-		{
-			return;
-		}
-
-		audio.clip = sounds[Random.Range(0, sounds.Length)];
-		audio.Play();
+		sound?.Play();
 	}
 
 	private void StartAnimation()
@@ -102,5 +91,8 @@ public class Footprint : MonoBehaviour
 
 		color.a = 0f;
 		text.color = color;
+
+		StopAnimation();
+		gameObject.SetActive(false);
 	}
 }
