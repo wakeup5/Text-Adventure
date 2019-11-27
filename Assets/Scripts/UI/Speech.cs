@@ -24,7 +24,6 @@ public class Speech : MonoBehaviour
 	private void Awake()
 	{
 		Hide();
-		Active(nameText.text, speechText.text);
 	}
 
 	public void Active(string name, string speech)
