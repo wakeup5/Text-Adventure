@@ -24,10 +24,10 @@ public class UIManager : MonoBehaviour
 
 	private void Start()
 	{
-		menu.Active(new Choice[2] {
-			new Choice() { text = "길을 막아선다.", action = null },
-			new Choice() { text = "그대로 사라진다.", action = null }
-		});
+		//menu.Active(new Choice[2] {
+		//	new Choice() { text = "길을 막아선다.", action = null },
+		//	new Choice() { text = "그대로 사라진다.", action = null }
+		//});
 	}
 
 	private void OnDestroy()
