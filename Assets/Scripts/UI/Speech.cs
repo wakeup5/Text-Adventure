@@ -66,6 +66,8 @@ public class Speech : MonoBehaviour
 
 	private IEnumerator SpeechAnimation()
 	{
+		nameText.text = this.name;
+		speechText.text = "";
 		string s = speech + " ▼";
 		
 		for (int i = 0; i < s.Length; i++)

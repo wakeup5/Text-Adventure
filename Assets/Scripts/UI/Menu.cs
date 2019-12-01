@@ -20,10 +20,19 @@ public class Menu : MonoBehaviour
 
 	private void Awake()
 	{
-		Active(new Choice[0]);
-	}
+		Active(new string[0]);
 
-	public void Active(Choice[] choices)
+		for (int i = 0; i < buttonSets.Length; i++)
+		{
+			int index = i;
+			buttonSets[i].button.onClick.AddListener(() =>
+			{
+				OnSelected?.Invoke(index);
+			});
+		}
+	}
+ 
+	public void Active(string[] choices)
 	{
 		for (int i = 0; i < buttonSets.Length; i++)
 		{
@@ -31,36 +40,18 @@ public class Menu : MonoBehaviour
 
 			if (i < choices.Length)
 			{
-				Choice choice = choices[i];
-
 				set.button.gameObject.SetActive(true);
-				set.text.text = "▶ " + choice.text;
-
-				int index = i;
-				set.button.onClick.AddListener(() => 
-				{
-					choice.action?.Invoke();
-					OnSelected?.Invoke(index);
-					set.button.onClick.RemoveAllListeners();
-				});
+				set.text.text = "▶ " + choices[i];
 			}
 			else
 			{
 				set.button.gameObject.SetActive(false);
-				set.button.onClick.RemoveAllListeners();
 			}
 		}
 	}
 
 	public void Hide()
 	{
-		Active(new Choice[0]);
+		Active(new string[0]);
 	}
-}
-
-[System.Serializable]
-public struct Choice
-{
-	public string text;
-	public UnityEvent action;
 }

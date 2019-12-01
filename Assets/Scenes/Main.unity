@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -399,6 +400,66 @@ Transform:
   m_Father: {fileID: 1025361871}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &127009099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 127009100}
+  - component: {fileID: 127009101}
+  m_Layer: 0
+  m_Name: A-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &127009100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127009099}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1466034396}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &127009101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127009099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99bbaf1dc203c4b4ab4a7e12e46ec8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texts: []
+  selects:
+  - content: "\uAE38\uC744 \uB9C9\uC544\uC120\uB2E4."
+    action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1061020600}
+          m_MethodName: StartScript
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1630741421}
+            m_ObjectArgumentAssemblyTypeName: TextScriptSet, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &201820410
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +591,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -761,6 +823,7 @@ GameObject:
   - component: {fileID: 473958957}
   - component: {fileID: 473958956}
   - component: {fileID: 473958958}
+  - component: {fileID: 473958959}
   m_Layer: 0
   m_Name: Black Knight
   m_TagString: Untagged
@@ -830,6 +893,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &473958959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473958955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9cf4dc7831d83479cdd435fc5ee71d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMesh: {fileID: 722225446}
+  characterName: "\uAC80\uC740 \uAE30\uC0AC"
 --- !u!1 &480273181
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,6 +961,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1188,6 +1266,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1252,7 +1331,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744838315}
-  m_Text: "\uD770 \uAE30\uC0AC"
+  m_Text: "\uD558\uC580 \uAE30\uC0AC"
   m_OffsetZ: 0
   m_CharacterSize: 0.075
   m_LineSpacing: 1
@@ -1280,6 +1359,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1527,8 +1607,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB108\uB294 \uBA87\uAC1C \uB3C4\uC2DC\uB97C \uD30C\uAD34\uD558\uACE0 \uC778\uAC04\uC744
-    \uD55C\uBA85\uB3C4 \uB0A8\uAE40\uC5C6\uC774 \uBAA8\uC870\uB9AC \uD559\uC0B4\uD588\uB2E4."
+  m_Text: "\uB108\uB294 \uBA87\uAC1C \uB3C4\uC2DC\uB97C \uD30C\uAD34\uD558\uACE0
+    \uC778\uAC04\uC744 \uD55C\uBA85\uB3C4 \uB0A8\uAE40\uC5C6\uC774 \uBAA8\uC870\uB9AC
+    \uD559\uC0B4\uD588\uB2E4."
 --- !u!222 &902681555
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1716,6 +1797,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1868,12 +1950,12 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1025361868}
-          m_MethodName: 
-          m_Mode: 1
+        - m_Target: {fileID: 1061020600}
+          m_MethodName: StartScript
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgument: {fileID: 127009101}
+            m_ObjectArgumentAssemblyTypeName: TextScriptSet, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1949,6 +2031,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1035751447}
+  - component: {fileID: 1035751448}
   m_Layer: 0
   m_Name: White Knight
   m_TagString: Untagged
@@ -1971,6 +2054,20 @@ Transform:
   m_Father: {fileID: 1025361871}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1035751448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035751446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9cf4dc7831d83479cdd435fc5ee71d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMesh: {fileID: 744838317}
+  characterName: "\uD558\uC580 \uAE30\uC0AC"
 --- !u!1 &1061020595
 GameObject:
   m_ObjectHideFlags: 0
@@ -2605,6 +2702,38 @@ Transform:
   m_Father: {fileID: 1025361871}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1466034395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1466034396}
+  m_Layer: 0
+  m_Name: Scripts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1466034396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466034395}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 127009100}
+  - {fileID: 1630741420}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1496839331
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,6 +2788,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2779,6 +2909,143 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1091960005}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1630741419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1630741420}
+  - component: {fileID: 1630741421}
+  m_Layer: 0
+  m_Name: A-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1630741420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630741419}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1466034396}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1630741421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630741419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99bbaf1dc203c4b4ab4a7e12e46ec8e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texts:
+  - type: 0
+    character: {fileID: 473958959}
+    text: "\uC778\uAC04\uC740 \uC6B4\uC774 \uC88B\uAD70. \uB0B4\uAC00 \uC544\uC9C1
+      \uC57D\uD560 \uB54C\uC5D0 \uB124\uAC00 \uB098\uD0C0\uB098\uB2E4\uB2C8."
+  - type: 1
+    character: {fileID: 1035751448}
+    text: "\uB108\uB294 \uBA87\uAC1C \uB3C4\uC2DC\uB97C \uD30C\uAD34\uD558\uACE0
+      \uC778\uAC04\uC744 \uD55C\uBA85\uB3C4 \uB0A8\uAE40\uC5C6\uC774 \uBAA8\uC870\uB9AC
+      \uD559\uC0B4\uD588\uB2E4."
+  - type: 0
+    character: {fileID: 473958959}
+    text: "\uBB3C\uB860."
+  - type: 0
+    character: {fileID: 473958959}
+    text: "\uC774 \uAC8C\uC784\uC740 \uBBF8\uC644\uC131\uC785\uB2C8\uB2E4. \uC774
+      \uAC8C\uC784\uC774 \uC644\uC131\uB418\uAE38 \uAE30\uC57D\uD569\uB2C8\uB2E4."
+  selects:
+  - content: "\uB370\uBAA8\uB97C \uCC98\uC74C\uBD80\uD130 \uB2E4\uC2DC \uD50C\uB808\uC774
+      \uD55C\uB2E4."
+    action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1025361870}
+          m_MethodName: Play
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 185c3262355f6e6448b928cd3fddbe84,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Playables.PlayableAsset,
+              UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - content: "\uAC8C\uC784\uC744 \uC885\uB8CC\uD55C\uB2E4."
+    action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1728491334}
+          m_MethodName: Quit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!1 &1728491333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1728491335}
+  - component: {fileID: 1728491334}
+  m_Layer: 0
+  m_Name: '[App]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1728491334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728491333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 523dd28a4574a5747a715890fc5be8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1728491335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728491333}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 435.0717, y: 275.07175, z: -76.29783}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1756775141
 GameObject:
@@ -3449,6 +3716,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
